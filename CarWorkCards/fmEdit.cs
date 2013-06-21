@@ -19,16 +19,15 @@ namespace CarWorkCards
 
         private void fmEdit_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'carArhivDataSet.REPAIR' table. You can move, or remove it, as needed.
-            this.rEPAIRTableAdapter.Fill(this.carArhivDataSet.REPAIR);
-            // TODO: This line of code loads data into the 'carArhiv_DB_DataSet.CAR_LIST' table. You can move, or remove it, as needed.
+            
+            this.rEPAIRTableAdapter.Fill(this.carArhivDataSet.REPAIR);            
             this.cAR_LISTTableAdapter.Fill(this.carArhiv_DB_DataSet.CAR_LIST);
 
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            //TODO: Опитвам се да взимам PK key-а на селектирания ред или клетка
             Int64 iRecordId = 0;
             int selectedIndex = 0;
             gdEdit.SelectedRows.ToString(); 
@@ -40,7 +39,7 @@ namespace CarWorkCards
             }
 
  
-            MessageBox.Show(gdEdit.SelectedCells..ToString());
+            MessageBox.Show(gdEdit.SelectedCells.ToString());
            
         }
 
