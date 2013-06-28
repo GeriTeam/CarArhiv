@@ -12,6 +12,10 @@ namespace CarWorkCards
 {
     public partial class fmEdit : Form
     {
+        //Кънектване към базата
+        SqlConnection CunnectionToCarArhiv = new SqlConnection(@"Data Source=C:\Users\radoslav\Documents\GitHub\CarArhiv\CarWorkCards\CarArhiv.mdb");
+        SqlCommand CommandToCarArhiv = new SqlCommand();
+        SqlDataReader ReaderCarArhiv;
         public fmEdit()
         {
             InitializeComponent();
@@ -27,6 +31,7 @@ namespace CarWorkCards
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+ 
             //TODO: Опитвам се да взимам PK key-а на селектирания ред или клетка
             Int64 iRecordId = 0;
             int selectedIndex = 0;
@@ -39,7 +44,7 @@ namespace CarWorkCards
             }
 
  
-            MessageBox.Show(gdEdit.SelectedCells.ToString());
+            MessageBox.Show(gdEdit.CurrentRow.ToString());
            
         }
 

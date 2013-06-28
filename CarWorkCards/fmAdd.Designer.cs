@@ -28,15 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.carArhiv_DB_DataSet = new CarWorkCards.CarArhiv_DB_DataSet();
-            this.carArhivDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gdAdd = new System.Windows.Forms.DataGridView();
-            this.cARLISTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cAR_LISTTableAdapter = new CarWorkCards.CarArhiv_DB_DataSetTableAdapters.CAR_LISTTableAdapter();
-            this.cARLISTCODEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mARKADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dKNOMERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAdd = new System.Windows.Forms.Button();
             this.edtMarka = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,62 +36,18 @@
             this.edtDK_Nomer = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.edtModel = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.carArhiv_DB_DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.carArhivDBDataSetBindingSource)).BeginInit();
+            this.carArhivDataSet = new CarWorkCards.CarArhivDataSet();
             ((System.ComponentModel.ISupportInitialize)(this.gdAdd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cARLISTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carArhivDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // carArhiv_DB_DataSet
-            // 
-            this.carArhiv_DB_DataSet.DataSetName = "CarArhiv_DB_DataSet";
-            this.carArhiv_DB_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // carArhivDBDataSetBindingSource
-            // 
-            this.carArhivDBDataSetBindingSource.DataSource = this.carArhiv_DB_DataSet;
-            this.carArhivDBDataSetBindingSource.Position = 0;
             // 
             // gdAdd
             // 
-            this.gdAdd.AutoGenerateColumns = false;
             this.gdAdd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gdAdd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cARLISTCODEDataGridViewTextBoxColumn,
-            this.mARKADataGridViewTextBoxColumn,
-            this.dKNOMERDataGridViewTextBoxColumn});
-            this.gdAdd.DataSource = this.cARLISTBindingSource;
             this.gdAdd.Location = new System.Drawing.Point(12, 12);
             this.gdAdd.Name = "gdAdd";
             this.gdAdd.Size = new System.Drawing.Size(352, 289);
             this.gdAdd.TabIndex = 0;
-            // 
-            // cARLISTBindingSource
-            // 
-            this.cARLISTBindingSource.DataMember = "CAR_LIST";
-            this.cARLISTBindingSource.DataSource = this.carArhivDBDataSetBindingSource;
-            // 
-            // cAR_LISTTableAdapter
-            // 
-            this.cAR_LISTTableAdapter.ClearBeforeFill = true;
-            // 
-            // cARLISTCODEDataGridViewTextBoxColumn
-            // 
-            this.cARLISTCODEDataGridViewTextBoxColumn.DataPropertyName = "CAR_LIST_CODE";
-            this.cARLISTCODEDataGridViewTextBoxColumn.HeaderText = "CAR_LIST_CODE";
-            this.cARLISTCODEDataGridViewTextBoxColumn.Name = "cARLISTCODEDataGridViewTextBoxColumn";
-            // 
-            // mARKADataGridViewTextBoxColumn
-            // 
-            this.mARKADataGridViewTextBoxColumn.DataPropertyName = "MARKA";
-            this.mARKADataGridViewTextBoxColumn.HeaderText = "MARKA";
-            this.mARKADataGridViewTextBoxColumn.Name = "mARKADataGridViewTextBoxColumn";
-            // 
-            // dKNOMERDataGridViewTextBoxColumn
-            // 
-            this.dKNOMERDataGridViewTextBoxColumn.DataPropertyName = "DK_NOMER";
-            this.dKNOMERDataGridViewTextBoxColumn.HeaderText = "DK_NOMER";
-            this.dKNOMERDataGridViewTextBoxColumn.Name = "dKNOMERDataGridViewTextBoxColumn";
             // 
             // btnAdd
             // 
@@ -159,6 +107,11 @@
             this.edtModel.Size = new System.Drawing.Size(108, 20);
             this.edtModel.TabIndex = 6;
             // 
+            // carArhivDataSet
+            // 
+            this.carArhivDataSet.DataSetName = "CarArhivDataSet";
+            this.carArhivDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // fmAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,10 +128,8 @@
             this.Name = "fmAdd";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.fmAdd_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.carArhiv_DB_DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.carArhivDBDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdAdd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cARLISTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carArhivDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,14 +137,7 @@
 
         #endregion
 
-        private System.Windows.Forms.BindingSource carArhivDBDataSetBindingSource;
-        private CarArhiv_DB_DataSet carArhiv_DB_DataSet;
         private System.Windows.Forms.DataGridView gdAdd;
-        private System.Windows.Forms.BindingSource cARLISTBindingSource;
-        private CarArhiv_DB_DataSetTableAdapters.CAR_LISTTableAdapter cAR_LISTTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cARLISTCODEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mARKADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dKNOMERDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox edtMarka;
         private System.Windows.Forms.Label label1;
@@ -201,5 +145,6 @@
         private System.Windows.Forms.TextBox edtDK_Nomer;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox edtModel;
+        private CarArhivDataSet carArhivDataSet;
     }
 }

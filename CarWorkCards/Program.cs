@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
+
 namespace CarWorkCards
 {
     static class Program
@@ -17,5 +18,7 @@ namespace CarWorkCards
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new fmMain());
         }
+
+
     }
 }
