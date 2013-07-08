@@ -18,8 +18,8 @@ namespace CarWorkCards
 
         private void button1_Click(object sender, EventArgs e)
         {
-            fmAdd fmAdd = new fmAdd();
-            fmAdd.Show();
+            fmRegistar fmRegistar = new fmRegistar();
+            fmRegistar.Show();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

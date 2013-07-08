@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CWC.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,15 +49,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarArhivDataSet.Designer.cs">
+    <Compile Include="CarArhiv_DB_DataSet_Rapair.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CarArhivDataSet.xsd</DependentUpon>
+      <DependentUpon>CarArhiv_DB_DataSet_Rapair.xsd</DependentUpon>
     </Compile>
-    <Compile Include="CarArhiv_DB_DataSet.Designer.cs">
+    <Compile Include="CarArhiv_DB_DataSet_CarList.cs">
+      <DependentUpon>CarArhiv_DB_DataSet_CarList.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CarArhiv_DB_DataSet_CarList.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CarArhiv_DB_DataSet.xsd</DependentUpon>
+      <DependentUpon>CarArhiv_DB_DataSet_CarList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fmAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmAdd.Designer.cs">
+      <DependentUpon>fmAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="fmEdit.cs">
       <SubType>Form</SubType>
@@ -68,22 +81,25 @@
     <Compile Include="fmMain.Designer.cs">
       <DependentUpon>fmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmAdd.cs">
+    <Compile Include="fmRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmAdd.Designer.cs">
-      <DependentUpon>fmAdd.cs</DependentUpon>
+    <Compile Include="fmRegister.Designer.cs">
+      <DependentUpon>fmRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fmAdd.resx">
+      <DependentUpon>fmAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fmEdit.resx">
       <DependentUpon>fmEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmMain.resx">
       <DependentUpon>fmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmAdd.resx">
-      <DependentUpon>fmAdd.cs</DependentUpon>
+    <EmbeddedResource Include="fmRegister.resx">
+      <DependentUpon>fmRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,27 +112,27 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
-    <None Include="CarArhivDataSet.xsc">
-      <DependentUpon>CarArhivDataSet.xsd</DependentUpon>
+    <None Include="CarArhiv_DB_DataSet_Rapair.xsc">
+      <DependentUpon>CarArhiv_DB_DataSet_Rapair.xsd</DependentUpon>
     </None>
-    <None Include="CarArhivDataSet.xsd">
+    <None Include="CarArhiv_DB_DataSet_Rapair.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CarArhivDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>CarArhiv_DB_DataSet_Rapair.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="CarArhivDataSet.xss">
-      <DependentUpon>CarArhivDataSet.xsd</DependentUpon>
+    <None Include="CarArhiv_DB_DataSet_Rapair.xss">
+      <DependentUpon>CarArhiv_DB_DataSet_Rapair.xsd</DependentUpon>
     </None>
-    <None Include="CarArhiv_DB_DataSet.xsc">
-      <DependentUpon>CarArhiv_DB_DataSet.xsd</DependentUpon>
+    <None Include="CarArhiv_DB_DataSet_CarList.xsc">
+      <DependentUpon>CarArhiv_DB_DataSet_CarList.xsd</DependentUpon>
     </None>
-    <None Include="CarArhiv_DB_DataSet.xsd">
+    <None Include="CarArhiv_DB_DataSet_CarList.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CarArhiv_DB_DataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>CarArhiv_DB_DataSet_CarList.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="CarArhiv_DB_DataSet.xss">
-      <DependentUpon>CarArhiv_DB_DataSet.xsd</DependentUpon>
+    <None Include="CarArhiv_DB_DataSet_CarList.xss">
+      <DependentUpon>CarArhiv_DB_DataSet_CarList.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -132,6 +148,7 @@
     <Content Include="CarArhiv.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="CWC.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -11,11 +11,8 @@ using System.Data.SqlClient;
 namespace CarWorkCards
 {
     public partial class fmEdit : Form
-    {
-        //Кънектване към базата
-        SqlConnection CunnectionToCarArhiv = new SqlConnection(@"Data Source=C:\Users\radoslav\Documents\GitHub\CarArhiv\CarWorkCards\CarArhiv.mdb");
-        SqlCommand CommandToCarArhiv = new SqlCommand();
-        SqlDataReader ReaderCarArhiv;
+    {      
+
         public fmEdit()
         {
             InitializeComponent();

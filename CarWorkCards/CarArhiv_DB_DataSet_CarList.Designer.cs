@@ -22,7 +22,7 @@ namespace CarWorkCards {
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
     [global::System.Xml.Serialization.XmlRootAttribute("CarArhiv_DB_DataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class CarArhiv_DB_DataSet : global::System.Data.DataSet {
+    public partial class CarArhiv_DB_DataSet_CarList : global::System.Data.DataSet {
         
         private CAR_LISTDataTable tableCAR_LIST;
         
@@ -30,7 +30,7 @@ namespace CarWorkCards {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public CarArhiv_DB_DataSet() {
+        public CarArhiv_DB_DataSet_CarList() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace CarWorkCards {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected CarArhiv_DB_DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected CarArhiv_DB_DataSet_CarList(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace CarWorkCards {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            CarArhiv_DB_DataSet cln = ((CarArhiv_DB_DataSet)(base.Clone()));
+            CarArhiv_DB_DataSet_CarList cln = ((CarArhiv_DB_DataSet_CarList)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -225,7 +225,7 @@ namespace CarWorkCards {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            CarArhiv_DB_DataSet ds = new CarArhiv_DB_DataSet();
+            CarArhiv_DB_DataSet_CarList ds = new CarArhiv_DB_DataSet_CarList();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -284,6 +284,16 @@ namespace CarWorkCards {
             private global::System.Data.DataColumn columnMARKA;
             
             private global::System.Data.DataColumn columnDK_NOMER;
+            
+            private global::System.Data.DataColumn columnMODEL;
+            
+            private global::System.Data.DataColumn columnCOLOR;
+            
+            private global::System.Data.DataColumn columnCUSTOMER;
+            
+            private global::System.Data.DataColumn columnTELEFON;
+            
+            private global::System.Data.DataColumn columnGOD_PROIZVODSTVO;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -344,6 +354,46 @@ namespace CarWorkCards {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MODELColumn {
+                get {
+                    return this.columnMODEL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn COLORColumn {
+                get {
+                    return this.columnCOLOR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUSTOMERColumn {
+                get {
+                    return this.columnCUSTOMER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TELEFONColumn {
+                get {
+                    return this.columnTELEFON;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn GOD_PROIZVODSTVOColumn {
+                get {
+                    return this.columnGOD_PROIZVODSTVO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -379,12 +429,17 @@ namespace CarWorkCards {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CAR_LISTRow AddCAR_LISTRow(string MARKA, string DK_NOMER) {
+            public CAR_LISTRow AddCAR_LISTRow(string MARKA, string DK_NOMER, string MODEL, string COLOR, string CUSTOMER, string TELEFON, string GOD_PROIZVODSTVO) {
                 CAR_LISTRow rowCAR_LISTRow = ((CAR_LISTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         MARKA,
-                        DK_NOMER};
+                        DK_NOMER,
+                        MODEL,
+                        COLOR,
+                        CUSTOMER,
+                        TELEFON,
+                        GOD_PROIZVODSTVO};
                 rowCAR_LISTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCAR_LISTRow);
                 return rowCAR_LISTRow;
@@ -417,6 +472,11 @@ namespace CarWorkCards {
                 this.columnCAR_LIST_CODE = base.Columns["CAR_LIST_CODE"];
                 this.columnMARKA = base.Columns["MARKA"];
                 this.columnDK_NOMER = base.Columns["DK_NOMER"];
+                this.columnMODEL = base.Columns["MODEL"];
+                this.columnCOLOR = base.Columns["COLOR"];
+                this.columnCUSTOMER = base.Columns["CUSTOMER"];
+                this.columnTELEFON = base.Columns["TELEFON"];
+                this.columnGOD_PROIZVODSTVO = base.Columns["GOD_PROIZVODSTVO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -428,6 +488,16 @@ namespace CarWorkCards {
                 base.Columns.Add(this.columnMARKA);
                 this.columnDK_NOMER = new global::System.Data.DataColumn("DK_NOMER", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDK_NOMER);
+                this.columnMODEL = new global::System.Data.DataColumn("MODEL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMODEL);
+                this.columnCOLOR = new global::System.Data.DataColumn("COLOR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCOLOR);
+                this.columnCUSTOMER = new global::System.Data.DataColumn("CUSTOMER", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUSTOMER);
+                this.columnTELEFON = new global::System.Data.DataColumn("TELEFON", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTELEFON);
+                this.columnGOD_PROIZVODSTVO = new global::System.Data.DataColumn("GOD_PROIZVODSTVO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGOD_PROIZVODSTVO);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCAR_LIST_CODE}, true));
                 this.columnCAR_LIST_CODE.AutoIncrement = true;
@@ -437,6 +507,11 @@ namespace CarWorkCards {
                 this.columnCAR_LIST_CODE.Unique = true;
                 this.columnMARKA.MaxLength = 255;
                 this.columnDK_NOMER.MaxLength = 255;
+                this.columnMODEL.MaxLength = 255;
+                this.columnCOLOR.MaxLength = 255;
+                this.columnCUSTOMER.MaxLength = 255;
+                this.columnTELEFON.MaxLength = 255;
+                this.columnGOD_PROIZVODSTVO.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -504,7 +579,7 @@ namespace CarWorkCards {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                CarArhiv_DB_DataSet ds = new CarArhiv_DB_DataSet();
+                CarArhiv_DB_DataSet_CarList ds = new CarArhiv_DB_DataSet_CarList();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -622,6 +697,86 @@ namespace CarWorkCards {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string MODEL {
+                get {
+                    try {
+                        return ((string)(this[this.tableCAR_LIST.MODELColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MODEL\' in table \'CAR_LIST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCAR_LIST.MODELColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string COLOR {
+                get {
+                    try {
+                        return ((string)(this[this.tableCAR_LIST.COLORColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'COLOR\' in table \'CAR_LIST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCAR_LIST.COLORColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CUSTOMER {
+                get {
+                    try {
+                        return ((string)(this[this.tableCAR_LIST.CUSTOMERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CUSTOMER\' in table \'CAR_LIST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCAR_LIST.CUSTOMERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TELEFON {
+                get {
+                    try {
+                        return ((string)(this[this.tableCAR_LIST.TELEFONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TELEFON\' in table \'CAR_LIST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCAR_LIST.TELEFONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string GOD_PROIZVODSTVO {
+                get {
+                    try {
+                        return ((string)(this[this.tableCAR_LIST.GOD_PROIZVODSTVOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GOD_PROIZVODSTVO\' in table \'CAR_LIST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCAR_LIST.GOD_PROIZVODSTVOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsMARKANull() {
                 return this.IsNull(this.tableCAR_LIST.MARKAColumn);
             }
@@ -642,6 +797,66 @@ namespace CarWorkCards {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDK_NOMERNull() {
                 this[this.tableCAR_LIST.DK_NOMERColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMODELNull() {
+                return this.IsNull(this.tableCAR_LIST.MODELColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMODELNull() {
+                this[this.tableCAR_LIST.MODELColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCOLORNull() {
+                return this.IsNull(this.tableCAR_LIST.COLORColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCOLORNull() {
+                this[this.tableCAR_LIST.COLORColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCUSTOMERNull() {
+                return this.IsNull(this.tableCAR_LIST.CUSTOMERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCUSTOMERNull() {
+                this[this.tableCAR_LIST.CUSTOMERColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTELEFONNull() {
+                return this.IsNull(this.tableCAR_LIST.TELEFONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTELEFONNull() {
+                this[this.tableCAR_LIST.TELEFONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsGOD_PROIZVODSTVONull() {
+                return this.IsNull(this.tableCAR_LIST.GOD_PROIZVODSTVOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetGOD_PROIZVODSTVONull() {
+                this[this.tableCAR_LIST.GOD_PROIZVODSTVOColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -807,36 +1022,69 @@ namespace CarWorkCards.CarArhiv_DB_DataSetTableAdapters {
             tableMapping.ColumnMappings.Add("CAR_LIST_CODE", "CAR_LIST_CODE");
             tableMapping.ColumnMappings.Add("MARKA", "MARKA");
             tableMapping.ColumnMappings.Add("DK_NOMER", "DK_NOMER");
+            tableMapping.ColumnMappings.Add("MODEL", "MODEL");
+            tableMapping.ColumnMappings.Add("COLOR", "COLOR");
+            tableMapping.ColumnMappings.Add("CUSTOMER", "CUSTOMER");
+            tableMapping.ColumnMappings.Add("TELEFON", "TELEFON");
+            tableMapping.ColumnMappings.Add("GOD_PROIZVODSTVO", "GOD_PROIZVODSTVO");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `CAR_LIST` WHERE ((`CAR_LIST_CODE` = ?) AND ((? = 1 AND `MARKA` IS NU" +
-                "LL) OR (`MARKA` = ?)) AND ((? = 1 AND `DK_NOMER` IS NULL) OR (`DK_NOMER` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `CAR_LIST` WHERE ((`CAR_LIST_CODE` = ?) AND ((? = 1 AND `MARKA` IS NULL) OR (`MARKA` = ?)) AND ((? = 1 AND `DK_NOMER` IS NULL) OR (`DK_NOMER` = ?)) AND ((? = 1 AND `MODEL` IS NULL) OR (`MODEL` = ?)) AND ((? = 1 AND `COLOR` IS NULL) OR (`COLOR` = ?)) AND ((? = 1 AND `CUSTOMER` IS NULL) OR (`CUSTOMER` = ?)) AND ((? = 1 AND `TELEFON` IS NULL) OR (`TELEFON` = ?)) AND ((? = 1 AND `GOD_PROIZVODSTVO` IS NULL) OR (`GOD_PROIZVODSTVO` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_CAR_LIST_CODE", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CAR_LIST_CODE", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_MARKA", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MARKA", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_MARKA", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MARKA", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DK_NOMER", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DK_NOMER", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DK_NOMER", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DK_NOMER", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_MODEL", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MODEL", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_MODEL", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MODEL", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_COLOR", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COLOR", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_COLOR", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COLOR", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_CUSTOMER", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CUSTOMER", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_CUSTOMER", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CUSTOMER", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_TELEFON", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TELEFON", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TELEFON", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TELEFON", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_GOD_PROIZVODSTVO", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "GOD_PROIZVODSTVO", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_GOD_PROIZVODSTVO", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "GOD_PROIZVODSTVO", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `CAR_LIST` (`MARKA`, `DK_NOMER`) VALUES (?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `CAR_LIST` (`MARKA`, `DK_NOMER`, `MODEL`, `COLOR`, `CUSTOMER`, `TELEF" +
+                "ON`, `GOD_PROIZVODSTVO`) VALUES (?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MARKA", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MARKA", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DK_NOMER", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DK_NOMER", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MODEL", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MODEL", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("COLOR", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COLOR", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CUSTOMER", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CUSTOMER", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TELEFON", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TELEFON", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("GOD_PROIZVODSTVO", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "GOD_PROIZVODSTVO", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `CAR_LIST` SET `MARKA` = ?, `DK_NOMER` = ? WHERE ((`CAR_LIST_CODE` = ?) AN" +
-                "D ((? = 1 AND `MARKA` IS NULL) OR (`MARKA` = ?)) AND ((? = 1 AND `DK_NOMER` IS N" +
-                "ULL) OR (`DK_NOMER` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `CAR_LIST` SET `MARKA` = ?, `DK_NOMER` = ?, `MODEL` = ?, `COLOR` = ?, `CUSTOMER` = ?, `TELEFON` = ?, `GOD_PROIZVODSTVO` = ? WHERE ((`CAR_LIST_CODE` = ?) AND ((? = 1 AND `MARKA` IS NULL) OR (`MARKA` = ?)) AND ((? = 1 AND `DK_NOMER` IS NULL) OR (`DK_NOMER` = ?)) AND ((? = 1 AND `MODEL` IS NULL) OR (`MODEL` = ?)) AND ((? = 1 AND `COLOR` IS NULL) OR (`COLOR` = ?)) AND ((? = 1 AND `CUSTOMER` IS NULL) OR (`CUSTOMER` = ?)) AND ((? = 1 AND `TELEFON` IS NULL) OR (`TELEFON` = ?)) AND ((? = 1 AND `GOD_PROIZVODSTVO` IS NULL) OR (`GOD_PROIZVODSTVO` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MARKA", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MARKA", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DK_NOMER", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DK_NOMER", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MODEL", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MODEL", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("COLOR", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COLOR", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CUSTOMER", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CUSTOMER", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TELEFON", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TELEFON", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("GOD_PROIZVODSTVO", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "GOD_PROIZVODSTVO", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_CAR_LIST_CODE", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CAR_LIST_CODE", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_MARKA", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MARKA", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_MARKA", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MARKA", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DK_NOMER", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DK_NOMER", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DK_NOMER", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DK_NOMER", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_MODEL", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MODEL", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_MODEL", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MODEL", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_COLOR", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COLOR", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_COLOR", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COLOR", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_CUSTOMER", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CUSTOMER", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_CUSTOMER", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CUSTOMER", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_TELEFON", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TELEFON", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TELEFON", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TELEFON", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_GOD_PROIZVODSTVO", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "GOD_PROIZVODSTVO", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_GOD_PROIZVODSTVO", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "GOD_PROIZVODSTVO", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -849,18 +1097,32 @@ namespace CarWorkCards.CarArhiv_DB_DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT CAR_LIST_CODE, MARKA, DK_NOMER FROM CAR_LIST";
+            this._commandCollection[0].CommandText = "SELECT * FROM CAR_LIST";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        CAR_LIST_CODE, MARKA, DK_NOMER, MODEL, COLOR, CUSTOMER, TELEFON, GOD_PROIZVODSTVO
+FROM            CAR_LIST c
+WHERE        (MARKA LIKE [_MARKA] OR
+                         MARKA IS NULL) AND (DK_NOMER LIKE [_DK_NOMER] OR
+                         DK_NOMER IS NULL) AND (MODEL LIKE [_MODEL] OR
+                         MODEL IS NULL) AND (TELEFON LIKE [_TELEFON] OR
+                         TELEFON IS NULL)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("_MARKA", global::System.Data.OleDb.OleDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MARKA", global::System.Data.DataRowVersion.Default, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("_MODEL", global::System.Data.OleDb.OleDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MODEL", global::System.Data.DataRowVersion.Default, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("_DK_NOMER", global::System.Data.OleDb.OleDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DK_NOMER", global::System.Data.DataRowVersion.Default, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("_TELEFON", global::System.Data.OleDb.OleDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TELEFON", global::System.Data.DataRowVersion.Default, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CarArhiv_DB_DataSet.CAR_LISTDataTable dataTable) {
+        public virtual int Fill(CarArhiv_DB_DataSet_CarList.CAR_LISTDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -873,9 +1135,9 @@ namespace CarWorkCards.CarArhiv_DB_DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CarArhiv_DB_DataSet.CAR_LISTDataTable GetData() {
+        public virtual CarArhiv_DB_DataSet_CarList.CAR_LISTDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            CarArhiv_DB_DataSet.CAR_LISTDataTable dataTable = new CarArhiv_DB_DataSet.CAR_LISTDataTable();
+            CarArhiv_DB_DataSet_CarList.CAR_LISTDataTable dataTable = new CarArhiv_DB_DataSet_CarList.CAR_LISTDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -883,14 +1145,51 @@ namespace CarWorkCards.CarArhiv_DB_DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CarArhiv_DB_DataSet.CAR_LISTDataTable dataTable) {
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int Filter(CarArhiv_DB_DataSet_CarList.CAR_LISTDataTable dataTable, string _MARKA, string _MODEL, string _DK_NOMER, string _TELEFON) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((_MARKA == null)) {
+                throw new global::System.ArgumentNullException("_MARKA");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(_MARKA));
+            }
+            if ((_MODEL == null)) {
+                throw new global::System.ArgumentNullException("_MODEL");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(_MODEL));
+            }
+            if ((_DK_NOMER == null)) {
+                throw new global::System.ArgumentNullException("_DK_NOMER");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(_DK_NOMER));
+            }
+            if ((_TELEFON == null)) {
+                throw new global::System.ArgumentNullException("_TELEFON");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(_TELEFON));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(CarArhiv_DB_DataSet_CarList.CAR_LISTDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CarArhiv_DB_DataSet dataSet) {
+        public virtual int Update(CarArhiv_DB_DataSet_CarList dataSet) {
             return this.Adapter.Update(dataSet, "CAR_LIST");
         }
         
@@ -913,7 +1212,7 @@ namespace CarWorkCards.CarArhiv_DB_DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_CAR_LIST_CODE, string Original_MARKA, string Original_DK_NOMER) {
+        public virtual int Delete(int Original_CAR_LIST_CODE, string Original_MARKA, string Original_DK_NOMER, string Original_MODEL, string Original_COLOR, string Original_CUSTOMER, string Original_TELEFON, string Original_GOD_PROIZVODSTVO) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_CAR_LIST_CODE));
             if ((Original_MARKA == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -930,6 +1229,46 @@ namespace CarWorkCards.CarArhiv_DB_DataSetTableAdapters {
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_DK_NOMER));
+            }
+            if ((Original_MODEL == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_MODEL));
+            }
+            if ((Original_COLOR == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_COLOR));
+            }
+            if ((Original_CUSTOMER == null)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_CUSTOMER));
+            }
+            if ((Original_TELEFON == null)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_TELEFON));
+            }
+            if ((Original_GOD_PROIZVODSTVO == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_GOD_PROIZVODSTVO));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -951,7 +1290,7 @@ namespace CarWorkCards.CarArhiv_DB_DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string MARKA, string DK_NOMER) {
+        public virtual int Insert(string MARKA, string DK_NOMER, string MODEL, string COLOR, string CUSTOMER, string TELEFON, string GOD_PROIZVODSTVO) {
             if ((MARKA == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -963,6 +1302,36 @@ namespace CarWorkCards.CarArhiv_DB_DataSetTableAdapters {
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(DK_NOMER));
+            }
+            if ((MODEL == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(MODEL));
+            }
+            if ((COLOR == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(COLOR));
+            }
+            if ((CUSTOMER == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(CUSTOMER));
+            }
+            if ((TELEFON == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(TELEFON));
+            }
+            if ((GOD_PROIZVODSTVO == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(GOD_PROIZVODSTVO));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -984,7 +1353,7 @@ namespace CarWorkCards.CarArhiv_DB_DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string MARKA, string DK_NOMER, int Original_CAR_LIST_CODE, string Original_MARKA, string Original_DK_NOMER) {
+        public virtual int Update(string MARKA, string DK_NOMER, string MODEL, string COLOR, string CUSTOMER, string TELEFON, string GOD_PROIZVODSTVO, int Original_CAR_LIST_CODE, string Original_MARKA, string Original_DK_NOMER, string Original_MODEL, string Original_COLOR, string Original_CUSTOMER, string Original_TELEFON, string Original_GOD_PROIZVODSTVO) {
             if ((MARKA == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -997,22 +1366,92 @@ namespace CarWorkCards.CarArhiv_DB_DataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(DK_NOMER));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_CAR_LIST_CODE));
-            if ((Original_MARKA == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
+            if ((MODEL == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(MODEL));
+            }
+            if ((COLOR == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(COLOR));
+            }
+            if ((CUSTOMER == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_MARKA));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(CUSTOMER));
             }
-            if ((Original_DK_NOMER == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+            if ((TELEFON == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(TELEFON));
+            }
+            if ((GOD_PROIZVODSTVO == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_DK_NOMER));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(GOD_PROIZVODSTVO));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_CAR_LIST_CODE));
+            if ((Original_MARKA == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_MARKA));
+            }
+            if ((Original_DK_NOMER == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_DK_NOMER));
+            }
+            if ((Original_MODEL == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_MODEL));
+            }
+            if ((Original_COLOR == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_COLOR));
+            }
+            if ((Original_CUSTOMER == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_CUSTOMER));
+            }
+            if ((Original_TELEFON == null)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_TELEFON));
+            }
+            if ((Original_GOD_PROIZVODSTVO == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_GOD_PROIZVODSTVO));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1122,7 +1561,7 @@ namespace CarWorkCards.CarArhiv_DB_DataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(CarArhiv_DB_DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(CarArhiv_DB_DataSet_CarList dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._cAR_LISTTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.CAR_LIST.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1141,7 +1580,7 @@ namespace CarWorkCards.CarArhiv_DB_DataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(CarArhiv_DB_DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(CarArhiv_DB_DataSet_CarList dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._cAR_LISTTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.CAR_LIST.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1159,7 +1598,7 @@ namespace CarWorkCards.CarArhiv_DB_DataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(CarArhiv_DB_DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(CarArhiv_DB_DataSet_CarList dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._cAR_LISTTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.CAR_LIST.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1201,7 +1640,7 @@ namespace CarWorkCards.CarArhiv_DB_DataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(CarArhiv_DB_DataSet dataSet) {
+        public virtual int UpdateAll(CarArhiv_DB_DataSet_CarList dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

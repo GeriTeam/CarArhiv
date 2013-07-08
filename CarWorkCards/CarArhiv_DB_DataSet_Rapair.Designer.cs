@@ -22,7 +22,7 @@ namespace CarWorkCards {
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
     [global::System.Xml.Serialization.XmlRootAttribute("CarArhivDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class CarArhivDataSet : global::System.Data.DataSet {
+    public partial class CarArhiv_DB_DataSet_Rapair : global::System.Data.DataSet {
         
         private REPAIRDataTable tableREPAIR;
         
@@ -30,7 +30,7 @@ namespace CarWorkCards {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public CarArhivDataSet() {
+        public CarArhiv_DB_DataSet_Rapair() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace CarWorkCards {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected CarArhivDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected CarArhiv_DB_DataSet_Rapair(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace CarWorkCards {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            CarArhivDataSet cln = ((CarArhivDataSet)(base.Clone()));
+            CarArhiv_DB_DataSet_Rapair cln = ((CarArhiv_DB_DataSet_Rapair)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -225,7 +225,7 @@ namespace CarWorkCards {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            CarArhivDataSet ds = new CarArhivDataSet();
+            CarArhiv_DB_DataSet_Rapair ds = new CarArhiv_DB_DataSet_Rapair();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -542,7 +542,7 @@ namespace CarWorkCards {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                CarArhivDataSet ds = new CarArhivDataSet();
+                CarArhiv_DB_DataSet_Rapair ds = new CarArhiv_DB_DataSet_Rapair();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1004,7 +1004,7 @@ namespace CarWorkCards.CarArhivDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CarArhivDataSet.REPAIRDataTable dataTable) {
+        public virtual int Fill(CarArhiv_DB_DataSet_Rapair.REPAIRDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1017,9 +1017,9 @@ namespace CarWorkCards.CarArhivDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CarArhivDataSet.REPAIRDataTable GetData() {
+        public virtual CarArhiv_DB_DataSet_Rapair.REPAIRDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            CarArhivDataSet.REPAIRDataTable dataTable = new CarArhivDataSet.REPAIRDataTable();
+            CarArhiv_DB_DataSet_Rapair.REPAIRDataTable dataTable = new CarArhiv_DB_DataSet_Rapair.REPAIRDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1027,14 +1027,14 @@ namespace CarWorkCards.CarArhivDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CarArhivDataSet.REPAIRDataTable dataTable) {
+        public virtual int Update(CarArhiv_DB_DataSet_Rapair.REPAIRDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CarArhivDataSet dataSet) {
+        public virtual int Update(CarArhiv_DB_DataSet_Rapair dataSet) {
             return this.Adapter.Update(dataSet, "REPAIR");
         }
         
@@ -1380,7 +1380,7 @@ namespace CarWorkCards.CarArhivDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(CarArhivDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(CarArhiv_DB_DataSet_Rapair dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._rEPAIRTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.REPAIR.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1399,7 +1399,7 @@ namespace CarWorkCards.CarArhivDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(CarArhivDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(CarArhiv_DB_DataSet_Rapair dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._rEPAIRTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.REPAIR.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1417,7 +1417,7 @@ namespace CarWorkCards.CarArhivDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(CarArhivDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(CarArhiv_DB_DataSet_Rapair dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._rEPAIRTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.REPAIR.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1459,7 +1459,7 @@ namespace CarWorkCards.CarArhivDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(CarArhivDataSet dataSet) {
+        public virtual int UpdateAll(CarArhiv_DB_DataSet_Rapair dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

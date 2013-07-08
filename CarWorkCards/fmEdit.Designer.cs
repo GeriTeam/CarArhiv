@@ -34,7 +34,7 @@
             this.mARKADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dKNOMERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cARLISTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.carArhiv_DB_DataSet = new CarWorkCards.CarArhiv_DB_DataSet();
+            this.carArhiv_DB_DataSet = new CarWorkCards.CarArhiv_DB_DataSet_CarList();
             this.cAR_LISTTableAdapter = new CarWorkCards.CarArhiv_DB_DataSetTableAdapters.CAR_LISTTableAdapter();
             this.btnSave = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -45,7 +45,7 @@
             this.rEPAIRDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rEPAIRBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.carArhivDataSet = new CarWorkCards.CarArhivDataSet();
+            this.carArhivDataSet = new CarWorkCards.CarArhiv_DB_DataSet_Rapair();
             this.rEPAIRTableAdapter = new CarWorkCards.CarArhivDataSetTableAdapters.REPAIRTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.gdEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cARLISTBindingSource)).BeginInit();
@@ -205,7 +205,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView gdEdit;
-        private CarArhiv_DB_DataSet carArhiv_DB_DataSet;
+        private CarArhiv_DB_DataSet_CarList carArhiv_DB_DataSet;
         private System.Windows.Forms.BindingSource cARLISTBindingSource;
         private CarArhiv_DB_DataSetTableAdapters.CAR_LISTTableAdapter cAR_LISTTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn cARLISTCODEDataGridViewTextBoxColumn;
@@ -213,7 +213,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dKNOMERDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private CarArhivDataSet carArhivDataSet;
+        private CarArhiv_DB_DataSet_Rapair carArhivDataSet;
         private System.Windows.Forms.BindingSource rEPAIRBindingSource;
         private CarArhivDataSetTableAdapters.REPAIRTableAdapter rEPAIRTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn rEPAIRCODEDataGridViewTextBoxColumn;
