@@ -77,7 +77,9 @@ namespace CarWorkCards
         {
             if (currentRow != -1)
             {
-                //MessageBox.Show(gdAdd..ToString());
+                string PK_CODE_STR;
+                PK_CODE_STR = gdAdd.Rows[currentRow].Cells["CAR_LIST_CODE"].Value.ToString();
+                MessageBox.Show(PK_CODE_STR);
 
                 
             }
