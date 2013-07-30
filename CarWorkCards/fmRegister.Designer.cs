@@ -30,6 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gdAdd = new System.Windows.Forms.DataGridView();
+            this.mARKADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MODEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dKNOMERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COLOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CUSTOMER = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TELEFON = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GOD_PROIZVODSTVO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CAR_LIST_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cARLISTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.carArhiv_DB_DataSet = new CarWorkCards.CarArhiv_DB_DataSet_CarList();
             this.btnFilter = new System.Windows.Forms.Button();
@@ -48,14 +56,6 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.cAR_LISTTableAdapter = new CarWorkCards.CarArhiv_DB_DataSetTableAdapters.CAR_LISTTableAdapter();
-            this.mARKADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MODEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dKNOMERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COLOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CUSTOMER = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TELEFON = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GOD_PROIZVODSTVO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CAR_LIST_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gdAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cARLISTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carArhiv_DB_DataSet)).BeginInit();
@@ -86,6 +86,62 @@
             this.gdAdd.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdAdd_CellClick);
             this.gdAdd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdAdd_CellContentClick);
             this.gdAdd.Click += new System.EventHandler(this.gdAdd_Click);
+            // 
+            // mARKADataGridViewTextBoxColumn
+            // 
+            this.mARKADataGridViewTextBoxColumn.DataPropertyName = "MARKA";
+            this.mARKADataGridViewTextBoxColumn.HeaderText = "Марка";
+            this.mARKADataGridViewTextBoxColumn.Name = "mARKADataGridViewTextBoxColumn";
+            // 
+            // MODEL
+            // 
+            this.MODEL.DataPropertyName = "MODEL";
+            this.MODEL.HeaderText = "Модел";
+            this.MODEL.Name = "MODEL";
+            this.MODEL.Width = 60;
+            // 
+            // dKNOMERDataGridViewTextBoxColumn
+            // 
+            this.dKNOMERDataGridViewTextBoxColumn.DataPropertyName = "DK_NOMER";
+            this.dKNOMERDataGridViewTextBoxColumn.HeaderText = "Рег. номер";
+            this.dKNOMERDataGridViewTextBoxColumn.Name = "dKNOMERDataGridViewTextBoxColumn";
+            this.dKNOMERDataGridViewTextBoxColumn.ToolTipText = "Рег. номер";
+            this.dKNOMERDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // COLOR
+            // 
+            this.COLOR.DataPropertyName = "COLOR";
+            this.COLOR.HeaderText = "Цвят";
+            this.COLOR.Name = "COLOR";
+            this.COLOR.Width = 45;
+            // 
+            // CUSTOMER
+            // 
+            this.CUSTOMER.DataPropertyName = "CUSTOMER";
+            this.CUSTOMER.HeaderText = "Собственик";
+            this.CUSTOMER.Name = "CUSTOMER";
+            this.CUSTOMER.Width = 189;
+            // 
+            // TELEFON
+            // 
+            this.TELEFON.DataPropertyName = "TELEFON";
+            this.TELEFON.HeaderText = "Телефон";
+            this.TELEFON.Name = "TELEFON";
+            this.TELEFON.Width = 75;
+            // 
+            // GOD_PROIZVODSTVO
+            // 
+            this.GOD_PROIZVODSTVO.DataPropertyName = "GOD_PROIZVODSTVO";
+            this.GOD_PROIZVODSTVO.HeaderText = "Год. производство";
+            this.GOD_PROIZVODSTVO.Name = "GOD_PROIZVODSTVO";
+            this.GOD_PROIZVODSTVO.Width = 80;
+            // 
+            // CAR_LIST_CODE
+            // 
+            this.CAR_LIST_CODE.DataPropertyName = "CAR_LIST_CODE";
+            this.CAR_LIST_CODE.HeaderText = "CAR_LIST_CODE";
+            this.CAR_LIST_CODE.Name = "CAR_LIST_CODE";
+            this.CAR_LIST_CODE.Visible = false;
             // 
             // cARLISTBindingSource
             // 
@@ -244,62 +300,6 @@
             // cAR_LISTTableAdapter
             // 
             this.cAR_LISTTableAdapter.ClearBeforeFill = true;
-            // 
-            // mARKADataGridViewTextBoxColumn
-            // 
-            this.mARKADataGridViewTextBoxColumn.DataPropertyName = "MARKA";
-            this.mARKADataGridViewTextBoxColumn.HeaderText = "Марка";
-            this.mARKADataGridViewTextBoxColumn.Name = "mARKADataGridViewTextBoxColumn";
-            // 
-            // MODEL
-            // 
-            this.MODEL.DataPropertyName = "MODEL";
-            this.MODEL.HeaderText = "Модел";
-            this.MODEL.Name = "MODEL";
-            this.MODEL.Width = 60;
-            // 
-            // dKNOMERDataGridViewTextBoxColumn
-            // 
-            this.dKNOMERDataGridViewTextBoxColumn.DataPropertyName = "DK_NOMER";
-            this.dKNOMERDataGridViewTextBoxColumn.HeaderText = "Рег. номер";
-            this.dKNOMERDataGridViewTextBoxColumn.Name = "dKNOMERDataGridViewTextBoxColumn";
-            this.dKNOMERDataGridViewTextBoxColumn.ToolTipText = "Рег. номер";
-            this.dKNOMERDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // COLOR
-            // 
-            this.COLOR.DataPropertyName = "COLOR";
-            this.COLOR.HeaderText = "Цвят";
-            this.COLOR.Name = "COLOR";
-            this.COLOR.Width = 45;
-            // 
-            // CUSTOMER
-            // 
-            this.CUSTOMER.DataPropertyName = "CUSTOMER";
-            this.CUSTOMER.HeaderText = "Собственик";
-            this.CUSTOMER.Name = "CUSTOMER";
-            this.CUSTOMER.Width = 189;
-            // 
-            // TELEFON
-            // 
-            this.TELEFON.DataPropertyName = "TELEFON";
-            this.TELEFON.HeaderText = "Телефон";
-            this.TELEFON.Name = "TELEFON";
-            this.TELEFON.Width = 75;
-            // 
-            // GOD_PROIZVODSTVO
-            // 
-            this.GOD_PROIZVODSTVO.DataPropertyName = "GOD_PROIZVODSTVO";
-            this.GOD_PROIZVODSTVO.HeaderText = "Год. производство";
-            this.GOD_PROIZVODSTVO.Name = "GOD_PROIZVODSTVO";
-            this.GOD_PROIZVODSTVO.Width = 80;
-            // 
-            // CAR_LIST_CODE
-            // 
-            this.CAR_LIST_CODE.DataPropertyName = "CAR_LIST_CODE";
-            this.CAR_LIST_CODE.HeaderText = "CAR_LIST_CODE";
-            this.CAR_LIST_CODE.Name = "CAR_LIST_CODE";
-            this.CAR_LIST_CODE.Visible = false;
             // 
             // fmRegistar
             // 

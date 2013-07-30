@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.edtDK_Nomer = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.edtMarka = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,6 +44,21 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
+            this.grdAdd = new System.Windows.Forms.DataGridView();
+            this.cARLISTCODEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mARKADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dKNOMERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mODELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cOLORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cUSTOMERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tELEFONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gODPROIZVODSTVODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cARLISTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.carArhiv_DB_DataSet_CarList = new CarWorkCards.CarArhiv_DB_DataSet_CarList();
+            this.cAR_LISTTableAdapter = new CarWorkCards.CarArhiv_DB_DataSetTableAdapters.CAR_LISTTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.grdAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cARLISTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carArhiv_DB_DataSet_CarList)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -81,12 +97,12 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Марка";
             // 
-            // textBox1
+            // edtMarka
             // 
-            this.textBox1.Location = new System.Drawing.Point(132, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(108, 20);
-            this.textBox1.TabIndex = 8;
+            this.edtMarka.Location = new System.Drawing.Point(132, 53);
+            this.edtMarka.Name = "edtMarka";
+            this.edtMarka.Size = new System.Drawing.Size(108, 20);
+            this.edtMarka.TabIndex = 8;
             // 
             // label4
             // 
@@ -168,11 +184,95 @@
             this.textBox7.Size = new System.Drawing.Size(450, 20);
             this.textBox7.TabIndex = 16;
             // 
+            // grdAdd
+            // 
+            this.grdAdd.AutoGenerateColumns = false;
+            this.grdAdd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdAdd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cARLISTCODEDataGridViewTextBoxColumn,
+            this.mARKADataGridViewTextBoxColumn,
+            this.dKNOMERDataGridViewTextBoxColumn,
+            this.mODELDataGridViewTextBoxColumn,
+            this.cOLORDataGridViewTextBoxColumn,
+            this.cUSTOMERDataGridViewTextBoxColumn,
+            this.tELEFONDataGridViewTextBoxColumn,
+            this.gODPROIZVODSTVODataGridViewTextBoxColumn});
+            this.grdAdd.DataSource = this.cARLISTBindingSource;
+            this.grdAdd.Location = new System.Drawing.Point(225, -10);
+            this.grdAdd.Name = "grdAdd";
+            this.grdAdd.Size = new System.Drawing.Size(240, 150);
+            this.grdAdd.TabIndex = 20;
+            this.grdAdd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdAdd_CellContentClick);
+            this.grdAdd.DoubleClick += new System.EventHandler(this.grdAdd_DoubleClick);
+            // 
+            // cARLISTCODEDataGridViewTextBoxColumn
+            // 
+            this.cARLISTCODEDataGridViewTextBoxColumn.DataPropertyName = "CAR_LIST_CODE";
+            this.cARLISTCODEDataGridViewTextBoxColumn.HeaderText = "CAR_LIST_CODE";
+            this.cARLISTCODEDataGridViewTextBoxColumn.Name = "cARLISTCODEDataGridViewTextBoxColumn";
+            // 
+            // mARKADataGridViewTextBoxColumn
+            // 
+            this.mARKADataGridViewTextBoxColumn.DataPropertyName = "MARKA";
+            this.mARKADataGridViewTextBoxColumn.HeaderText = "MARKA";
+            this.mARKADataGridViewTextBoxColumn.Name = "mARKADataGridViewTextBoxColumn";
+            // 
+            // dKNOMERDataGridViewTextBoxColumn
+            // 
+            this.dKNOMERDataGridViewTextBoxColumn.DataPropertyName = "DK_NOMER";
+            this.dKNOMERDataGridViewTextBoxColumn.HeaderText = "DK_NOMER";
+            this.dKNOMERDataGridViewTextBoxColumn.Name = "dKNOMERDataGridViewTextBoxColumn";
+            // 
+            // mODELDataGridViewTextBoxColumn
+            // 
+            this.mODELDataGridViewTextBoxColumn.DataPropertyName = "MODEL";
+            this.mODELDataGridViewTextBoxColumn.HeaderText = "MODEL";
+            this.mODELDataGridViewTextBoxColumn.Name = "mODELDataGridViewTextBoxColumn";
+            // 
+            // cOLORDataGridViewTextBoxColumn
+            // 
+            this.cOLORDataGridViewTextBoxColumn.DataPropertyName = "COLOR";
+            this.cOLORDataGridViewTextBoxColumn.HeaderText = "COLOR";
+            this.cOLORDataGridViewTextBoxColumn.Name = "cOLORDataGridViewTextBoxColumn";
+            // 
+            // cUSTOMERDataGridViewTextBoxColumn
+            // 
+            this.cUSTOMERDataGridViewTextBoxColumn.DataPropertyName = "CUSTOMER";
+            this.cUSTOMERDataGridViewTextBoxColumn.HeaderText = "CUSTOMER";
+            this.cUSTOMERDataGridViewTextBoxColumn.Name = "cUSTOMERDataGridViewTextBoxColumn";
+            // 
+            // tELEFONDataGridViewTextBoxColumn
+            // 
+            this.tELEFONDataGridViewTextBoxColumn.DataPropertyName = "TELEFON";
+            this.tELEFONDataGridViewTextBoxColumn.HeaderText = "TELEFON";
+            this.tELEFONDataGridViewTextBoxColumn.Name = "tELEFONDataGridViewTextBoxColumn";
+            // 
+            // gODPROIZVODSTVODataGridViewTextBoxColumn
+            // 
+            this.gODPROIZVODSTVODataGridViewTextBoxColumn.DataPropertyName = "GOD_PROIZVODSTVO";
+            this.gODPROIZVODSTVODataGridViewTextBoxColumn.HeaderText = "GOD_PROIZVODSTVO";
+            this.gODPROIZVODSTVODataGridViewTextBoxColumn.Name = "gODPROIZVODSTVODataGridViewTextBoxColumn";
+            // 
+            // cARLISTBindingSource
+            // 
+            this.cARLISTBindingSource.DataMember = "CAR_LIST";
+            this.cARLISTBindingSource.DataSource = this.carArhiv_DB_DataSet_CarList;
+            // 
+            // carArhiv_DB_DataSet_CarList
+            // 
+            this.carArhiv_DB_DataSet_CarList.DataSetName = "CarArhiv_DB_DataSet";
+            this.carArhiv_DB_DataSet_CarList.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cAR_LISTTableAdapter
+            // 
+            this.cAR_LISTTableAdapter.ClearBeforeFill = true;
+            // 
             // fmAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(596, 125);
+            this.Controls.Add(this.grdAdd);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label9);
@@ -184,13 +284,17 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.edtMarka);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.edtDK_Nomer);
             this.Controls.Add(this.label1);
             this.Name = "fmAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmAdd";
+            this.Load += new System.EventHandler(this.fmAdd_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grdAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cARLISTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carArhiv_DB_DataSet_CarList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,7 +306,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox edtDK_Nomer;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox edtMarka;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label5;
@@ -213,5 +317,17 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.DataGridView grdAdd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cARLISTCODEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mARKADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dKNOMERDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mODELDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cOLORDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cUSTOMERDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tELEFONDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gODPROIZVODSTVODataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource cARLISTBindingSource;
+        private CarArhiv_DB_DataSet_CarList carArhiv_DB_DataSet_CarList;
+        private CarArhiv_DB_DataSetTableAdapters.CAR_LISTTableAdapter cAR_LISTTableAdapter;
     }
 }
