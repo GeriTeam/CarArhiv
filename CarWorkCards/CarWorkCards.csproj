@@ -87,6 +87,12 @@
     <Compile Include="fmRegister.Designer.cs">
       <DependentUpon>fmRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="fmRegisterEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmRegisterEdit.Designer.cs">
+      <DependentUpon>fmRegisterEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fmAdd.resx">
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fmRegister.resx">
       <DependentUpon>fmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmRegisterEdit.resx">
+      <DependentUpon>fmRegisterEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

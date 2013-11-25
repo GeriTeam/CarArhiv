@@ -79,10 +79,11 @@ namespace CarWorkCards
             {
                 string PK_CODE_STR;
                 PK_CODE_STR = gdAdd.Rows[currentRow].Cells["CAR_LIST_CODE"].Value.ToString();
-                MessageBox.Show(PK_CODE_STR);
-
-                
+                MessageBox.Show(PK_CODE_STR);                
             }
+
+            fmRegisterEdit fmRegisterEdit = new fmRegisterEdit();
+            fmRegisterEdit.Show();
 
         }
     }
